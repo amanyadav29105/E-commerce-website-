@@ -1,0 +1,73 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f7fb;
+}
+
+/* VARIABLES */
+:root{
+  --primary:#2563eb;
+  --secondary:#1d4ed8;
+  --white:#fff;
+  --shadow:0 10px 25px rgba(0,0,0,0.08);
+  --radius:18px;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  padding:30px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.add-btn{
+  background:var(--primary);
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+/* CART */
+.cart-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--primary);
+  color:white;
+  padding:15px;
+  border-radius:50%;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.modal.active{
+  display:flex;
+}
+
+/* etc... (copy rest of your CSS here fully) */
