@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtoZ Cart 🛒</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="topbar">
+
+      <div class="logo">
+        <h1>AtoZ Cart 🛒</h1>
+        <p>Best products at affordable prices</p>
+      </div>
+
+      <div class="shop-info">
+        <p>📞 9466157880</p>
+        <p>✉️ amancraft1298@gmail.com</p>
+        <p>📍 India</p>
+      </div>
+
+    </div>
+
+    <div class="hero">
+      <h2>Order Products Online Easily</h2>
+      <p>Buy mobile accessories, Hot Wheels cars, notebooks and more.</p>
+    </div>
+  </div>
+</header>
+
+<!-- FILTERS -->
+<div class="container">
+  <div class="filters" id="filters"></div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+  <div class="products" id="products"></div>
+</div>
+
+<!-- CART -->
+<div class="cart-btn" id="cartBtn">
+  🛒
+  <div class="cart-count" id="cartCount">0</div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919466157880" target="_blank" class="whatsapp">💬</a>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2>Your Cart</h2>
+      <button class="close" id="closeModal">✕</button>
+    </div>
+
+    <div id="cartItems"></div>
+    <div class="total" id="cartTotal">Total: ₹0</div>
+
+    <button class="checkout" id="checkoutBtn">Place Order</button>
+
+    <!-- FORM -->
+    <form id="orderForm" action="https://formspree.io/f/mykarwbp" method="POST">
+
+      <input type="text" name="customer_name" placeholder="Name" required>
+      <input type="tel" name="phone_number" placeholder="Phone" required>
+      <textarea name="delivery_address" placeholder="Address" required></textarea>
+
+      <input type="hidden" id="orderSummary" name="order_summary">
+      <input type="hidden" id="grandTotal" name="grand_total">
+
+      <button type="submit" class="submit">Confirm Order</button>
+    </form>
+
+    <div class="success" id="success">
+      Order placed successfully!
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 AtoZ Cart 🛒
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+  </html>
